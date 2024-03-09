@@ -3,6 +3,8 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const app = express();
 
+app.use(express.static("public"));
+
 app.get("/scrape", function (req, res) {
   axios
     .get("https://www.scrapethissite.com/pages/")
